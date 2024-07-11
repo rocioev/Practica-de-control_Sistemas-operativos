@@ -1,0 +1,99 @@
+FICHERO AYUDA PARA FCFS/SJF-PAGINACIÓN-SEGUNDA OPORTUNIDAD-C-R
+POR ROCÍO ESTEBAN VALVERDE
+
+
+IMPORTANTE: Para que funcione la entrada por fichero todos los ficheros
+	que se indican a continuación deben estar en el directorio "datosScript"
+	y éste, en el directorio del script.
+
+TAMAÑO TERMINAL: Se recomienda ampliar la terminal a pantalla completa.
+
+INFORMES: por defecto tienen los nombres informeBN.txt e informeCOLOR.txt
+	y se guardan en la carpeta datosScript/informes
+	el directorio de los informes se puede cambiar al inicio del programa
+	
+INTRODUCCIÓN DE DATOS: para introducir los datos hay 6 opciones
+	- ENTRADA DE DATOS POR TECLADO:
+		Se irán pidiendo los datos uno a uno por pantalla, y el usuario deberá escribir cada dato y pulsar INTRO.
+		Se pregunta donde guardar los datos introducidos, en el fichero de última ejecución o en otro y con qué nombre.
+
+	- FICHERO DE DATOS DE ÚLTIMA EJECUCIÓN:
+		Extrae los datos del fichero de última ejecución 'datos.txt'.
+
+	- OTRO FICHERO DE DATOS
+		Muestra un listado de los archivos de texto que hay en el directorio datos.
+
+		Para introducir los datos por fichero hay que seguir el siguiente formato:
+		-Los datos se introducen mediante saltos de línea pudiendo haber solo uno
+		en cada línea.
+
+		-La 1ª línea hace referencia al tamaño de página
+		-La 2º línea hace referencia al los marcos totales de la memoria
+
+		A partir de aquí todo el resto de líneas corresponden a procesos independeintes,
+		donde toda la información de un proceso se encuentra en la misma línea y cada dato 
+		está separado por un espacio:
+
+		-El primer número hace referencia al tiempo de llegada de cada proceso
+		-El segundo número corresponde al número de marcos que ocupa el proceso
+		-El resto de números serán las direcciones del proceso
+
+		Habrá que repetir esta secuencia por cada proceso que queramos introducir.
+
+		A partir de estos datos el propio algoritmo ya es capaz de calcular el tamaño de la memoria, 
+		la página que corresponde a cada direccion y el tiempo de ejecución de cada proceso.
+
+			EJEMPLO DE ENTRADA DE DATOS POR FICHERO
+			
+			100       #Tamaño de página
+			20        #Número total de marcos de la memoria
+			4 3 234 657 346		 #4=T.LLegada  3=Nºde marcos  234=dirección 0  657=direccion 1 ...
+			7 4 789 587 126 458  #7=T.LLegada  4=Nºde marcos  789=dirección 0  587=direccion 1 ...
+
+		PD: no es necesario ordenar los procesos por orden de llegada, ya que el propio algoritmo
+		conforme va leyendo los tiempos de llegada los va ordenando.
+
+	(GENERACIÓN DE DATOS ALEATORIA)
+		Para generar datos aleatoriaente se necesitará establecer unos rangos que limitarán los datos 
+		creados. Estos rangos se pueden indicar manualmente o mediante un fichero de rangos.
+
+	- RANGOS POR TECLADO
+		Se irán pidiendo los datos uno a uno por pantalla, y el usuario deberá escribir cada dato y pulsar INTRO.
+		Hay 7 rangos que especificar y por cada uno se pedirá primero el mínimo y luego el máximo.
+		Se pregunta donde guardar los datos introducidos, en el fichero de última ejecución o en otro y con qué nombre.
+
+	- FICHERO DE RANGOS DE ULTIMA EJECUCUION
+		Extrae los datos del fichero de última ejecución 'datosrangos.txt'.
+
+	- OTRO FICHERO DE RANGOS
+		Muestra un listado de los archivos de texto que hay en el directorio rangos.
+		
+		Para introducir los datos por fichero se debe seguir el siguiente formato:
+		El fichero de rangos constará de 7 lineas y en cada línea debe haber dos numeros separados por un guión -
+		Cada línea corresponde a los rangos de un parámetro.
+
+			EJEMPLO DE UN FICHERO DE RANGOS
+
+			0-200			#Tamaño de las páginas
+			5-30			#Número de marcos de la memoria
+			3-9				#Número de procesos
+			0-50			#Tiempo de llegada
+			1-20			#Número de marcos que ocupan los procesos
+			5-30			#Número de páginas de los procesos
+			200-3000		#Números de direcciones
+
+	Una vez obtenidos los ragos se pregunta donde guardar los datos que se crearán con estos,
+	en el fichero de última ejecución o en otro y con qué nombre.
+
+MODO DE EJECUCIÓN: se puede seleccionar entre tres opciones de visualización de la ejecición. Al final siempre se muestra un resumen de lo sucedido.
+	- 1 Ejecución por eventos
+		Cada vez se presiona "enter", se muestra el siguiente evento destacable de la ejecución.
+	- 2 Ejecución automática
+		Cada x tiempo (que puedes seleccionar, predeterminado 3s),se muestra el siguiente evento destacable de la ejecución.
+	- 3 Ejecución completa
+		Ejecución completa del script(en los informes si que quedan reflejados los eventos).
+
+
+FICHERO AYUDA CREADO POR ISMAEL FRANCO HERNANDO, MODIFICADO POR ROCÍO ESTEBAN VALVERDE
+SISTEMAS OPERATIVOS - CURSO 2021/22
+(Pulsa INTRO para salir de la ayuda)

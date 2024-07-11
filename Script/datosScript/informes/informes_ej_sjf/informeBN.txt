@@ -1,0 +1,625 @@
+03/01/23_13:33
+############################################################
+#                                                          #
+#                   INFORME DE PRÁCTICA                    #
+#               GESTIÓN DE MEMORIA VIRTUAL                 #
+#       ———————————————————————————————————————————        #
+#                                                          #
+############################################################
+
+############################################################
+#                    © Creative Commons                    #
+#                   BY - Atribución (BY)                   #
+#                 NC - No uso Comercial (NC)               #
+#                SA - Compartir Igual (SA)                 #
+############################################################
+#                        Créditos:                         #
+#       LRU 1º: Ruben Uruñuela, Alejandro caballero        #
+#          LRU 2º: Daniel Delgado, Ruben Marcos            #
+#         LRU 3º: Daniel Mellado, Noelia Ubierna           #
+# LRU 4º: Fernando Antón Ortega & Daniel Beato de la Torre #
+#              Reloj: Ismael Franco Hernando               #
+#  Reloj: Luis Miguel Agüero Hernando, Alberto Diez Busto  #
+#               NFU: Catalin Andrei, Cacuci                #
+#                                                          #
+#   Algoritmo de gestión de procesos:  FCFS/SJF            #
+#   Gestión de memoria:                PAGINACIÓN          #
+#   Algoritmo de reemplazo de páginas: SEGUNDA OPORTUNIDAD #
+#   Memoria continua:                  SÍ                  #
+#   Memoria reublicable:               SÍ                  #
+#                                                          #
+#               Autor: Rocío Esteban Valverde              #
+#             Sistemas Operativos 2º Semestre              #
+#       Grado en ingeniería informática (2020-2021)        #
+#                                                          #
+#             Tutor: José Manuel Saiz Diez                 #
+#                                                          #
+############################################################
+
+Pulsa INTRO para continuar. 
+
+############################################################
+#                                                          #
+#                        ALGORITMO                         #
+#               GESTIÓN DE MEMORIA VIRTUAL                 #
+#       FCFS/SJF + Paginación + Segunda Oportunidad:       #
+#      —————————————————————————————————————————————       #
+#                                                          #
+############################################################
+
+¿Desea leer el fichero de ayuda o ejecutar el algoritmo?
+
+	1- Ejecutar el algoritmo
+	2- Visualizar la ayuda
+	3- Salir
+
+Seleccione una opción: 1
+
+############################################################
+#                                                          #
+#                        ALGORITMO                         #
+#               GESTIÓN DE MEMORIA VIRTUAL                 #
+#       FCFS/SJF + Paginación + Segunda Oportunidad:       #
+#      —————————————————————————————————————————————       #
+#                                                          #
+############################################################
+
+¿Dónde quieres guardar los informes?
+
+	1- En el directorio estandar (datosScript/informes)
+	2- En otro directorio
+
+Seleccione una opción: 2
+
+Introduce el nombre del directorio: informes_ej_sjf
+
+La carpeta 'informes_ej_sjf' ya contiene informes ¿Quieres sobrescribirlos?
+
+	s- Sí
+	n- No, elegir otro directorio
+
+Introduce: s
+Se han guardado los informes en el directorio 'informes_ej_sjf' 
+
+
+
+############################################################
+#                                                          #
+#                        ALGORITMO                         #
+#               GESTIÓN DE MEMORIA VIRTUAL                 #
+#       FCFS/SJF + Paginación + Segunda Oportunidad:       #
+#      —————————————————————————————————————————————       #
+#                                                          #
+############################################################
+
+Elige un método de ordenación de procesos:
+
+	1.Algoritmo FCFS.
+	2.Algoritmo SJF
+
+Seleccione una opción: 2
+
+Algoritmo de ordenación de procesos: SJF
+
+############################################################
+#                                                          #
+#                        ALGORITMO                         #
+#               GESTIÓN DE MEMORIA VIRTUAL                 #
+#          SJF + Paginación + Segunda Oportunidad:         #
+#      —————————————————————————————————————————————       #
+#                                                          #
+############################################################
+
+¿Cómo desea introducir los datos?
+
+	1- Por teclado
+	2- Fichero con los datos de la última ejecución (datos.txt)
+	3- Otro fichero de datos
+	Generar aleatoriamente: 
+	4- Introducir rangos por teclado
+	5- Fichero con los rangos de la última ejecución (datosrangos.txt)
+	6- Otro fichero de rangos
+
+Seleccione una opción: 2
+
+############################################################
+#                                                          #
+#                        ALGORITMO                         #
+#               GESTIÓN DE MEMORIA VIRTUAL                 #
+#          SJF + Paginación + Segunda Oportunidad:         #
+#      —————————————————————————————————————————————       #
+#                                                          #
+############################################################
+
+|Algoritmo usado:    SJF
+|Memoria del Sistema:	1200
+|Tamaño  de   Página:	100
+|Marcos totales de la memoria:	12
+ Ref Tll Tej nMar Dirección-Página 
+ P01   2   7    5 548057-5480 548057-5480 548057-5480 548057-5480 548057-5480 548057-5480 548057-5480 
+ P02   3  10    5 424666-4246 591789-5917 475005-4750 703990-7039 424666-4246 475005-4750 324430-3244 19268-192 
+ 69279-692 637416-6374 
+ P03   4   5    3 6869-68 441318-4413 258922-2589 6869-68 441318-4413 
+ P04  10  15    3 111-1 222-2 333-3 222-2 111-1 555-5 666-6 777-7 888-8 999-9 888-8 777-7 444-4 555-5 
+ 66-0 
+ P05  42   8    6 2021-20 200-2 100-1 2022-20 2222-22 200-2 0-0 2323-23 
+
+ Esto es un resumen de los datos obtenidos. Pulsa INTRO para continuar 
+
+
+
+|—————————————————————————————————————————————————————————————————————————|
+
+
+############################################################
+#                                                          #
+#                        ALGORITMO                         #
+#               GESTIÓN DE MEMORIA VIRTUAL                 #
+#          SJF + Paginación + Segunda Oportunidad:         #
+#      —————————————————————————————————————————————       #
+#                                                          #
+############################################################
+
+Modo de visualización de la ejecución: 
+
+	1- Por eventos (Pulsar Enter en cada evento)
+	2- Automático (Esperar unos segundos entre cada evento)
+	3- Completo (Directo al resumen con datos de la ejecución y fallos de página)
+
+Seleccione una opción: 1
+
+ 
+ FCFS/SJF+Paginación+Seg.Op+M. Continua y Reubicable
+ T=0   Algoritmo usado: SJF   Memoria del Sistema: 1200   Tamaño de página: 100   Marcos totales de la memoria: 12
+ Ref Tll Tej nMar Tesp Tret Trej Mini Mfin Estado           Dirección-Página 
+ P01   2   7    5   -    -    -    -    -  Fuera de sistema 548057-5480 548057-5480 548057-5480 548057-5480 
+ 548057-5480 548057-5480 548057-5480 
+ P02   3  10    5   -    -    -    -    -  Fuera de sistema 424666-4246 591789-5917 475005-4750 703990-7039 
+ 424666-4246 475005-4750 324430-3244 19268-192 69279-692 637416-6374 
+ P03   4   5    3   -    -    -    -    -  Fuera de sistema 6869-68 441318-4413 258922-2589 6869-68 441318-4413 
+ P04  10  15    3   -    -    -    -    -  Fuera de sistema 111-1 222-2 333-3 222-2 111-1 555-5 666-6 777-7 
+ 888-8 999-9 888-8 777-7 444-4 555-5 66-0 
+ P05  42   8    6   -    -    -    -    -  Fuera de sistema 2021-20 200-2 100-1 2022-20 2222-22 200-2 0-0 
+ 2323-23 
+ T. MEDIO ESPERA: 0       T. MEDIO RETORNO: 0      
+ Cola de ejecución:
+ Marcos de página 
+                                       
+ M0 M1 M2 M3 M4 M5 M6 M7 M8 M9 M10 M11 | M=12
+                                       
+                                       
+
+    |                                                            |
+ BM |****-****-****-****-****-****-****-****-****-****-****-****-| M=12
+    |    0                                                       |
+    |     |
+ BT |*****| T=0
+    |    0|
+
+ Pulsa INTRO para continuar 
+
+
+ 
+ FCFS/SJF+Paginación+Seg.Op+M. Continua y Reubicable
+ T=2   Algoritmo usado: SJF   Memoria del Sistema: 1200   Tamaño de página: 100   Marcos totales de la memoria: 12
+ Llega el proceso P01
+ Entra a memoria el proceso P01 
+ Entra al procesador el proceso P01
+ Ref Tll Tej nMar Tesp Tret Trej Mini Mfin Estado           Dirección-Página 
+ P01   2   7    5    0    0    7    0    4 En ejecución     548057-5480 548057-5480 548057-5480 548057-5480 
+ 548057-5480 548057-5480 548057-5480 
+ P02   3  10    5   -    -    -    -    -  Fuera de sistema 424666-4246 591789-5917 475005-4750 703990-7039 
+ 424666-4246 475005-4750 324430-3244 19268-192 69279-692 637416-6374 
+ P03   4   5    3   -    -    -    -    -  Fuera de sistema 6869-68 441318-4413 258922-2589 6869-68 441318-4413 
+ P04  10  15    3   -    -    -    -    -  Fuera de sistema 111-1 222-2 333-3 222-2 111-1 555-5 666-6 777-7 
+ 888-8 999-9 888-8 777-7 444-4 555-5 66-0 
+ P05  42   8    6   -    -    -    -    -  Fuera de sistema 2021-20 200-2 100-1 2022-20 2222-22 200-2 0-0 
+ 2323-23 
+ T. MEDIO ESPERA: 0       T. MEDIO RETORNO: 0      
+ Cola de ejecución:
+ Marcos de página 
+ P01                                     
+ M0   M1 M2 M3 M4 M5 M6 M7 M8 M9 M10 M11 | M=12
+ 5480  -  -  -  -                        
+    0  -  -  -  -                        
+
+    |P01                                                         |
+ BM |_5480____-____-____-____-****-****-****-****-****-****-****-| M=12
+    |    0                        5                              |
+    |          P01  |
+ BT |********** 5480| T=2
+    |    0         2|
+
+ Pulsa INTRO para continuar 
+
+
+ 
+ FCFS/SJF+Paginación+Seg.Op+M. Continua y Reubicable
+ T=3   Algoritmo usado: SJF   Memoria del Sistema: 1200   Tamaño de página: 100   Marcos totales de la memoria: 12
+ Llega el proceso P02
+ Entra a memoria el proceso P02 
+ Se sigue ejecutando el proceso  P01
+ Ref Tll Tej nMar Tesp Tret Trej Mini Mfin Estado           Dirección-Página 
+ P01   2   7    5    0    1    6    0    4 En ejecución     548057-5480 548057-5480 548057-5480 548057-5480 
+ 548057-5480 548057-5480 548057-5480 
+ P02   3  10    5    0    0   10    5    9 En memoria       424666-4246 591789-5917 475005-4750 703990-7039 
+ 424666-4246 475005-4750 324430-3244 19268-192 69279-692 637416-6374 
+ P03   4   5    3   -    -    -    -    -  Fuera de sistema 6869-68 441318-4413 258922-2589 6869-68 441318-4413 
+ P04  10  15    3   -    -    -    -    -  Fuera de sistema 111-1 222-2 333-3 222-2 111-1 555-5 666-6 777-7 
+ 888-8 999-9 888-8 777-7 444-4 555-5 66-0 
+ P05  42   8    6   -    -    -    -    -  Fuera de sistema 2021-20 200-2 100-1 2022-20 2222-22 200-2 0-0 
+ 2323-23 
+ T. MEDIO ESPERA: 0       T. MEDIO RETORNO: 0.500  
+ Cola de ejecución: P02
+ Marcos de página 
+ P01              P02                    
+ M0   M1 M2 M3 M4 M5 M6 M7 M8 M9 M10 M11 | M=12
+ 5480  -  -  -  -  -  -  -  -  -         
+    1  -  -  -  -                        
+
+    |P01                      P02                                |
+ BM |_5480____-____-____-____-____-____-____-____-____-****-****-| M=12
+    |    0                        5                       10     |
+    |          P01       |
+ BT |**********_5480 5480| T=3
+    |    0         2     |
+
+ Pulsa INTRO para continuar 
+
+
+ 
+ FCFS/SJF+Paginación+Seg.Op+M. Continua y Reubicable
+ T=4   Algoritmo usado: SJF   Memoria del Sistema: 1200   Tamaño de página: 100   Marcos totales de la memoria: 12
+ Llega el proceso P03
+ Se sigue ejecutando el proceso  P01
+ Ref Tll Tej nMar Tesp Tret Trej Mini Mfin Estado           Dirección-Página 
+ P01   2   7    5    0    2    5    0    4 En ejecución     548057-5480 548057-5480 548057-5480 548057-5480 
+ 548057-5480 548057-5480 548057-5480 
+ P02   3  10    5    1    1   10    5    9 En memoria       424666-4246 591789-5917 475005-4750 703990-7039 
+ 424666-4246 475005-4750 324430-3244 19268-192 69279-692 637416-6374 
+ P03   4   5    3    0    0   -    -    -  En espera        6869-68 441318-4413 258922-2589 6869-68 441318-4413 
+ P04  10  15    3   -    -    -    -    -  Fuera de sistema 111-1 222-2 333-3 222-2 111-1 555-5 666-6 777-7 
+ 888-8 999-9 888-8 777-7 444-4 555-5 66-0 
+ P05  42   8    6   -    -    -    -    -  Fuera de sistema 2021-20 200-2 100-1 2022-20 2222-22 200-2 0-0 
+ 2323-23 
+ T. MEDIO ESPERA: 0.333   T. MEDIO RETORNO: 1.000  
+ Cola de ejecución: P02
+ Marcos de página 
+ P01              P02                    
+ M0   M1 M2 M3 M4 M5 M6 M7 M8 M9 M10 M11 | M=12
+ 5480  -  -  -  -  -  -  -  -  -         
+    1  -  -  -  -                        
+
+    |P01                      P02                                |
+ BM |_5480____-____-____-____-____-____-____-____-____-****-****-| M=12
+    |    0                        5                       10     |
+    |          P01            |
+ BT |**********_5480_5480 5480| T=4
+    |    0         2          |
+
+ Pulsa INTRO para continuar 
+
+
+ 
+ FCFS/SJF+Paginación+Seg.Op+M. Continua y Reubicable
+ T=9   Algoritmo usado: SJF   Memoria del Sistema: 1200   Tamaño de página: 100   Marcos totales de la memoria: 12
+ Entra a memoria el proceso P03 
+ Entra al procesador el proceso P03
+ El proceso P01 ha finalizado su ejecución
+  P01    Tiempo de entrada: 2 Tiempo Salida: 9 Tiempo Retorno: 7
+ Ref Tll Tej nMar Tesp Tret Trej Mini Mfin Estado           Dirección-Página 
+ P01   2   7    5    0    7   -    -    -  Finalizado       548057-5480 548057-5480 548057-5480 548057-5480 
+ 548057-5480 548057-5480 548057-5480 
+ P02   3  10    5    6    6   10    5    9 En memoria       424666-4246 591789-5917 475005-4750 703990-7039 
+ 424666-4246 475005-4750 324430-3244 19268-192 69279-692 637416-6374 
+ P03   4   5    3    5    5    5    0    2 En ejecución     6869-68 441318-4413 258922-2589 6869-68 441318-4413 
+ P04  10  15    3   -    -    -    -    -  Fuera de sistema 111-1 222-2 333-3 222-2 111-1 555-5 666-6 777-7 
+ 888-8 999-9 888-8 777-7 444-4 555-5 66-0 
+ P05  42   8    6   -    -    -    -    -  Fuera de sistema 2021-20 200-2 100-1 2022-20 2222-22 200-2 0-0 
+ 2323-23 
+ T. MEDIO ESPERA: 3.666   T. MEDIO RETORNO: 6.000  
+ Se han producido 1 fallos de página en la ejecución del proceso P01
+       5480   5480   5480   5480   5480   5480   5480
+ M0  0=5480 1=5480 1=5480 1=5480 1=5480 1=5480 1=5480
+ M1                                                  
+ M2                                                  
+ M3                                                  
+ M4                                                  
+          F                                           
+ Cola de ejecución: P02
+ Marcos de página 
+ P03            P02                    
+ M0 M1 M2 M3 M4 M5 M6 M7 M8 M9 M10 M11 | M=12
+ 68  -  -        -  -  -  -  -         
+  0  -  -                              
+
+    |P03                      P02                                |
+ BM |___68____-____-****-****-____-____-____-____-____-****-****-| M=12
+    |    0              3         5                       10     |
+    |          P01                                P03  |
+ BT |**********_5480_5480_5480_5480_5480_5480_5480   68| T=9
+    |    0         2                                  9|
+
+ Pulsa INTRO para continuar 
+
+
+ 
+ FCFS/SJF+Paginación+Seg.Op+M. Continua y Reubicable
+ T=10   Algoritmo usado: SJF   Memoria del Sistema: 1200   Tamaño de página: 100   Marcos totales de la memoria: 12
+ Llega el proceso P04
+ Entra a memoria el proceso P04 
+ Se sigue ejecutando el proceso  P03
+ Ref Tll Tej nMar Tesp Tret Trej Mini Mfin Estado           Dirección-Página 
+ P01   2   7    5    0    7   -    -    -  Finalizado       548057-5480 548057-5480 548057-5480 548057-5480 
+ 548057-5480 548057-5480 548057-5480 
+ P02   3  10    5    7    7   10    3    7 En memoria       424666-4246 591789-5917 475005-4750 703990-7039 
+ 424666-4246 475005-4750 324430-3244 19268-192 69279-692 637416-6374 
+ P03   4   5    3    5    6    4    0    2 En ejecución     6869-68 441318-4413 258922-2589 6869-68 441318-4413 
+ P04  10  15    3    0    0   15    8   10 En memoria       111-1 222-2 333-3 222-2 111-1 555-5 666-6 777-7 
+ 888-8 999-9 888-8 777-7 444-4 555-5 66-0 
+ P05  42   8    6   -    -    -    -    -  Fuera de sistema 2021-20 200-2 100-1 2022-20 2222-22 200-2 0-0 
+ 2323-23 
+ T. MEDIO ESPERA: 3.000   T. MEDIO RETORNO: 5.000  
+ Cola de ejecución: P02 P04
+ Se ha realizado reubicación
+     |P03            P02                  |
+ PRE |__-__-__-  -  -__-__-__-__-__-  -  -|
+     |  0        3     5             10   |
+     |P03      P02                        |
+ POS |__-__-__-__-__-__-__-__-  -  -  -  -|
+     |  0        3              8         |
+ Marcos de página 
+ P03        P02            P04           
+ M0 M1   M2 M3 M4 M5 M6 M7 M8 M9 M10 M11 | M=12
+ 68 4413  -  -  -  -  -  -  -  -   -     
+  0    0  -                              
+
+    |P03            P02                      P04                 |
+ BM |___68_4413____-____-____-____-____-____-____-____-____-****-| M=12
+    |    0              3                        8             11|
+    |          P01                                P03       |
+ BT |**********_5480_5480_5480_5480_5480_5480_5480___68 4413| T=10
+    |    0         2                                  9     |
+
+ Pulsa INTRO para continuar 
+
+
+ 
+ FCFS/SJF+Paginación+Seg.Op+M. Continua y Reubicable
+ T=14   Algoritmo usado: SJF   Memoria del Sistema: 1200   Tamaño de página: 100   Marcos totales de la memoria: 12
+ Entra al procesador el proceso P02
+ El proceso P03 ha finalizado su ejecución
+  P03    Tiempo de entrada: 9 Tiempo Salida: 14 Tiempo Retorno: 10
+ Ref Tll Tej nMar Tesp Tret Trej Mini Mfin Estado           Dirección-Página 
+ P01   2   7    5    0    7   -    -    -  Finalizado       548057-5480 548057-5480 548057-5480 548057-5480 
+ 548057-5480 548057-5480 548057-5480 
+ P02   3  10    5   11   11   10    3    7 En ejecución     424666-4246 591789-5917 475005-4750 703990-7039 
+ 424666-4246 475005-4750 324430-3244 19268-192 69279-692 637416-6374 
+ P03   4   5    3    5   10   -    -    -  Finalizado       6869-68 441318-4413 258922-2589 6869-68 441318-4413 
+ P04  10  15    3    4    4   15    8   10 En memoria       111-1 222-2 333-3 222-2 111-1 555-5 666-6 777-7 
+ 888-8 999-9 888-8 777-7 444-4 555-5 66-0 
+ P05  42   8    6   -    -    -    -    -  Fuera de sistema 2021-20 200-2 100-1 2022-20 2222-22 200-2 0-0 
+ 2323-23 
+ T. MEDIO ESPERA: 5.000   T. MEDIO RETORNO: 8.000  
+ Se han producido 3 fallos de página en la ejecución del proceso P03
+       68   4413   2589     68   4413
+ M0  0=68 0-0068 0-0068 1=0068       
+ M1       0=4413 0-4413        1=4413
+ M2              0=2589              
+        F      F      F               
+ Cola de ejecución: P04
+ Marcos de página 
+          P02              P04           
+ M0 M1 M2 M3   M4 M5 M6 M7 M8 M9 M10 M11 | M=12
+          4246  -  -  -  -  -  -   -     
+             0  -  -  -  -               
+
+    |               P02                      P04                 |
+ BM |****-****-****-_4246____-____-____-____-____-____-____-****-| M=12
+    |    0              3                        8             11|
+    |          P01                                P03                      P02  |
+ BT |**********_5480_5480_5480_5480_5480_5480_5480___68_4413_2589___68_4413 4246| T=14
+    |    0         2                                  9                       14|
+
+ Pulsa INTRO para continuar 
+
+
+ 
+ FCFS/SJF+Paginación+Seg.Op+M. Continua y Reubicable
+ T=24   Algoritmo usado: SJF   Memoria del Sistema: 1200   Tamaño de página: 100   Marcos totales de la memoria: 12
+ Entra al procesador el proceso P04
+ El proceso P02 ha finalizado su ejecución
+  P02    Tiempo de entrada: 14 Tiempo Salida: 24 Tiempo Retorno: 21
+ Ref Tll Tej nMar Tesp Tret Trej Mini Mfin Estado           Dirección-Página 
+ P01   2   7    5    0    7   -    -    -  Finalizado       548057-5480 548057-5480 548057-5480 548057-5480 
+ 548057-5480 548057-5480 548057-5480 
+ P02   3  10    5   11   21   -    -    -  Finalizado       424666-4246 591789-5917 475005-4750 703990-7039 
+ 424666-4246 475005-4750 324430-3244 19268-192 69279-692 637416-6374 
+ P03   4   5    3    5   10   -    -    -  Finalizado       6869-68 441318-4413 258922-2589 6869-68 441318-4413 
+ P04  10  15    3   14   14   15    8   10 En ejecución     111-1 222-2 333-3 222-2 111-1 555-5 666-6 777-7 
+ 888-8 999-9 888-8 777-7 444-4 555-5 66-0 
+ P05  42   8    6   -    -    -    -    -  Fuera de sistema 2021-20 200-2 100-1 2022-20 2222-22 200-2 0-0 
+ 2323-23 
+ T. MEDIO ESPERA: 7.500   T. MEDIO RETORNO: 13.000 
+ Se han producido 8 fallos de página en la ejecución del proceso P02
+       4246   5917   4750   7039   4246   4750   3244    192    692   6374
+ M3  0=4246 0-4246 0-4246 0-4246 1=4246        0-4246 0-4246 0-4246 0-4246
+ M4         0=5917 0-5917 0-5917               0-5917 0=0192 0-0192 0-0192
+ M5                0=4750 0-4750        1=4750 1-4750 0-4750 0-4750 0-4750
+ M6                       0=7039               0-7039 0-7039 0=0692 0-0692
+ M7                                            0=3244 0-3244 0-3244 0=6374
+          F      F      F      F                    F      F      F      F 
+ Cola de ejecución:
+ Marcos de página 
+                         P04           
+ M0 M1 M2 M3 M4 M5 M6 M7 M8 M9 M10 M11 | M=12
+                          1  -   -     
+                          0  -   -     
+
+    |                                        P04                 |
+ BM |****-****-****-****-****-****-****-****-____1____-____-****-| M=12
+    |    0                                       8             11|
+    |          P01                                P03                      P02                                          
+ BT |**********_5480_5480_5480_5480_5480_5480_5480___68_4413_2589___68_4413_4246_5917_4750_7039_4246_4750_3244__192__692
+    |    0         2                                  9                       14                                        
+          P04  |
+     _6374    1| T=24
+             24|
+
+ Pulsa INTRO para continuar 
+
+
+ 
+ FCFS/SJF+Paginación+Seg.Op+M. Continua y Reubicable
+ T=39   Algoritmo usado: SJF   Memoria del Sistema: 1200   Tamaño de página: 100   Marcos totales de la memoria: 12
+ El proceso P04 ha finalizado su ejecución
+  P04    Tiempo de entrada: 24 Tiempo Salida: 39 Tiempo Retorno: 29
+ Ref Tll Tej nMar Tesp Tret Trej Mini Mfin Estado           Dirección-Página 
+ P01   2   7    5    0    7   -    -    -  Finalizado       548057-5480 548057-5480 548057-5480 548057-5480 
+ 548057-5480 548057-5480 548057-5480 
+ P02   3  10    5   11   21   -    -    -  Finalizado       424666-4246 591789-5917 475005-4750 703990-7039 
+ 424666-4246 475005-4750 324430-3244 19268-192 69279-692 637416-6374 
+ P03   4   5    3    5   10   -    -    -  Finalizado       6869-68 441318-4413 258922-2589 6869-68 441318-4413 
+ P04  10  15    3   14   29   -    -    -  Finalizado       111-1 222-2 333-3 222-2 111-1 555-5 666-6 777-7 
+ 888-8 999-9 888-8 777-7 444-4 555-5 66-0 
+ P05  42   8    6   -    -    -    -    -  Fuera de sistema 2021-20 200-2 100-1 2022-20 2222-22 200-2 0-0 
+ 2323-23 
+ T. MEDIO ESPERA: 7.500   T. MEDIO RETORNO: 16.750 
+ Se han producido 11 fallos de página en la ejecución del proceso P04
+        1   2   3   2   1   5   6   7   8   9   8   7   4   5   0
+ M08  0=1 0-1 0-1     1=1 0-1 0-1 0-1 0=8 0-8 1=8 0-8 0-8 0=5 0-5
+ M09      0=2 0-2 1=2 0-2 0-2 0=6 0-6 0-6 0=9         0=4 0-4 0=0
+ M10          0=3         0=5 0-5 0=7 0-7 0-7     1=7 0-7 0-7 0-7
+        F   F   F           F   F   F   F   F           F   F   F 
+ Cola de ejecución:
+ Marcos de página 
+                                       
+ M0 M1 M2 M3 M4 M5 M6 M7 M8 M9 M10 M11 | M=12
+                                       
+                                       
+
+    |                                                            |
+ BM |****-****-****-****-****-****-****-****-****-****-****-****-| M=12
+    |    0                                                       |
+    |          P01                                P03                      P02                                          
+ BT |**********_5480_5480_5480_5480_5480_5480_5480___68_4413_2589___68_4413_4246_5917_4750_7039_4246_4750_3244__192__692
+    |    0         2                                  9                       14                                        
+          P04                                                                             |
+     _6374____1____2____3____2____1____5____6____7____8____9____8____7____4____5____0*****| T=39
+             24                                                                         39|
+
+ Pulsa INTRO para continuar 
+
+
+ 
+ FCFS/SJF+Paginación+Seg.Op+M. Continua y Reubicable
+ T=42   Algoritmo usado: SJF   Memoria del Sistema: 1200   Tamaño de página: 100   Marcos totales de la memoria: 12
+ Llega el proceso P05
+ Entra a memoria el proceso P05 
+ Entra al procesador el proceso P05
+ Ref Tll Tej nMar Tesp Tret Trej Mini Mfin Estado           Dirección-Página 
+ P01   2   7    5    0    7   -    -    -  Finalizado       548057-5480 548057-5480 548057-5480 548057-5480 
+ 548057-5480 548057-5480 548057-5480 
+ P02   3  10    5   11   21   -    -    -  Finalizado       424666-4246 591789-5917 475005-4750 703990-7039 
+ 424666-4246 475005-4750 324430-3244 19268-192 69279-692 637416-6374 
+ P03   4   5    3    5   10   -    -    -  Finalizado       6869-68 441318-4413 258922-2589 6869-68 441318-4413 
+ P04  10  15    3   14   29   -    -    -  Finalizado       111-1 222-2 333-3 222-2 111-1 555-5 666-6 777-7 
+ 888-8 999-9 888-8 777-7 444-4 555-5 66-0 
+ P05  42   8    6    0    0    8    0    5 En ejecución     2021-20 200-2 100-1 2022-20 2222-22 200-2 0-0 
+ 2323-23 
+ T. MEDIO ESPERA: 6.000   T. MEDIO RETORNO: 13.400 
+ Cola de ejecución:
+ Marcos de página 
+ P05                                   
+ M0 M1 M2 M3 M4 M5 M6 M7 M8 M9 M10 M11 | M=12
+ 20  -  -  -  -  -                     
+  0  -  -  -  -  -                     
+
+    |P05                                                         |
+ BM |___20____-____-____-____-____-****-****-****-****-****-****-| M=12
+    |    0                             6                         |
+    |          P01                                P03                      P02                                          
+ BT |**********_5480_5480_5480_5480_5480_5480_5480___68_4413_2589___68_4413_4246_5917_4750_7039_4246_4750_3244__192__692
+    |    0         2                                  9                       14                                        
+          P04                                                                                       P05  |
+     _6374____1____2____3____2____1____5____6____7____8____9____8____7____4____5____0***************   20| T=42
+             24                                                                         39             42|
+
+ Pulsa INTRO para continuar 
+
+
+ 
+ FCFS/SJF+Paginación+Seg.Op+M. Continua y Reubicable
+ T=50   Algoritmo usado: SJF   Memoria del Sistema: 1200   Tamaño de página: 100   Marcos totales de la memoria: 12
+ El proceso P05 ha finalizado su ejecución
+  P05    Tiempo de entrada: 42 Tiempo Salida: 50 Tiempo Retorno: 8
+ Ref Tll Tej nMar Tesp Tret Trej Mini Mfin Estado           Dirección-Página 
+ P01   2   7    5    0    7   -    -    -  Finalizado       548057-5480 548057-5480 548057-5480 548057-5480 
+ 548057-5480 548057-5480 548057-5480 
+ P02   3  10    5   11   21   -    -    -  Finalizado       424666-4246 591789-5917 475005-4750 703990-7039 
+ 424666-4246 475005-4750 324430-3244 19268-192 69279-692 637416-6374 
+ P03   4   5    3    5   10   -    -    -  Finalizado       6869-68 441318-4413 258922-2589 6869-68 441318-4413 
+ P04  10  15    3   14   29   -    -    -  Finalizado       111-1 222-2 333-3 222-2 111-1 555-5 666-6 777-7 
+ 888-8 999-9 888-8 777-7 444-4 555-5 66-0 
+ P05  42   8    6    0    8   -    -    -  Finalizado       2021-20 200-2 100-1 2022-20 2222-22 200-2 0-0 
+ 2323-23 
+ T. MEDIO ESPERA: 6.000   T. MEDIO RETORNO: 15.000 
+ Se han producido 6 fallos de página en la ejecución del proceso P05
+       20    2    1   20   22    2    0   23
+ M0  0=20 0-20 0-20 1=20 1-20      1-20 0-20
+ M1       0=02 0-02      0-02 1=02 1-02 0-02
+ M2            0=01      0-01      0-01 0-01
+ M3                      0=22      0-22 0-22
+ M4                                0=00 0-00
+ M5                                     0=23
+        F    F    F         F         F    F 
+ Cola de ejecución:
+ Marcos de página 
+                                       
+ M0 M1 M2 M3 M4 M5 M6 M7 M8 M9 M10 M11 | M=12
+                                       
+                                       
+
+    |                                                            |
+ BM |****-****-****-****-****-****-****-****-****-****-****-****-| M=12
+    |    0                                                       |
+    |          P01                                P03                      P02                                          
+ BT |**********_5480_5480_5480_5480_5480_5480_5480___68_4413_2589___68_4413_4246_5917_4750_7039_4246_4750_3244__192__692
+    |    0         2                                  9                       14                                        
+          P04                                                                                       P05            
+     _6374____1____2____3____2____1____5____6____7____8____9____8____7____4____5____0***************___20____2____1
+             24                                                                         39             42          
+                                   |
+     ___20___22____2____0___23*****| T=50
+                                 50|
+
+ Pulsa INTRO para continuar 
+
+
+T.ESPERA:     Tiempo que el proceso no ha estado ejecutándose en la CPU desde que entra en memoria hasta que sale
+ESPERA TOTAL: Tiempo que el proceso no ha estado ejecutándose en la CPU desde T=0 (Inicio del sistema) hasta que sale
+INICIO/FIN:   Tiempo de llegada al gestor de memoria del proceso y tiempo de salida del proceso
+T.RETORNO:    Tiempo total de ejecución del proceso, incluyendo tiempos de espera, desde la señal de entrada hasta la salida
+
+RESUMEN FINAL con tiempos de ejecución y fallos de página de cada proceso
+     Proceso	    T.Espera	   Inicio/Fin	    T.Retorno	    Fallos de página
+———————————————————————————————————————————————————————————————————————————————————
+ 	P01	 	0	      2/9	 	7	         1
+ 	P02	 	11	      14/24	 	21	         8
+ 	P03	 	5	      9/14	 	10	         3
+ 	P04	 	14	      24/39	 	29	         11
+ 	P05	 	0	      42/50	 	8	         6
+
+   Tiempo total transcurrido en ejecutar todos los procesos: 50
+   Media tiempo espera  de todos los procesos: 6.000 
+   Media tiempo retorno de todos los procesos: 15.000
+
+
+|———————————————————————————————————————————————————————————————|--------------------->
+
+
+
+Fin de la ejecución.
+
+Pulsa INTRO para continuar. 
+
