@@ -2,7 +2,6 @@
 ![Bash](https://img.shields.io/badge/Bash-%23121011.svg?logo=gnu-bash&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Last commit](https://img.shields.io/github/last-commit/rocioev/Practica-de-control_Sistemas-operativos)
 ![Repo size](https://img.shields.io/github/repo-size/rocioev/Practica-de-control_Sistemas-operativos)
 ![WSL](https://img.shields.io/badge/WSL-Compatible-0078D6?logo=windows&logoColor=white)
 
@@ -12,6 +11,9 @@ Práctica de la asignatura **Sistemas Operativos** (1º de Grado en Ingeniería 
 Implementa en **Bash** una simulación de **planificación de procesos** (FCFS/SJF) y **gestión de memoria por paginación**, con **reemplazo de páginas por Segunda Oportunidad (Clock)** y soporte de **memoria continua y reubicable**. 
 
 **Autora:** Rocío Esteban Valverde  
+**Fecha:** enero 2023
+
+
 
 ---
 
