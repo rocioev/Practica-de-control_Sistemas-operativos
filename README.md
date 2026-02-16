@@ -2,7 +2,6 @@
 ![Bash](https://img.shields.io/badge/Bash-%23121011.svg?logo=gnu-bash&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Repo size](https://img.shields.io/github/repo-size/rocioev/Practica-de-control_Sistemas-operativos)
 ![WSL](https://img.shields.io/badge/WSL-Compatible-0078D6?logo=windows&logoColor=white)
 
 # Simulador en Bash: FCFS/SJF + Paginación + Segunda Oportunidad (Clock)
